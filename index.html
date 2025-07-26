@@ -403,13 +403,65 @@
 <!-- Dessert section 시작 -->
 
 
+<head>
+  <meta charset="UTF-8" />
+  <title>왼쪽, 가운데, 오른쪽 같은 메뉴 박스</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+    }
 
+    .three-columns {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 60px auto 0;
+transform: translateX(-225px); /* ← 이 줄을 추가하세요 */
+    }
 
+    .menu-box {
+      flex: 1;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
 
+    .menu-box img.logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+    }
 
+    .menu-box .menu-text h3 {
+      margin: 20px 0;
+      font-size: 16px;
+      border-bottom: 1px dashed #ccc;
+      padding-bottom: 4px;
+    }
+
+    .price {
+      float: right;
+      color: #555;
+    }
+
+    .menu-box img.menu-image {
+      width: 100px;
+      height: auto;
+      margin-top: 20px;
+    }
+  </style>
+</head>
 
 
 <body>
+
+
+
 
   <div class="three-columns">
 
@@ -471,72 +523,7 @@
 
 
 
-<head>
-  <meta charset="UTF-8" />
-  <title>왼쪽, 가운데, 오른쪽 같은 메뉴 박스</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      padding: 40px;
-    }
 
-    .three-columns {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      max-width: 1200px;
-      margin: 60px auto 0;
-transform: translateX(-225px); /* ← 이 줄을 추가하세요 */
-    }
-
-    .menu-box {
-      flex: 1;
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .menu-box img.logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    .menu-box .menu-text h3 {
-      margin: 20px 0;
-      font-size: 16px;
-      border-bottom: 1px dashed #ccc;
-      padding-bottom: 4px;
-    }
-
-    .price {
-      float: right;
-      color: #555;
-    }
-
-    .menu-box img.menu-image {
-      width: 100px;
-      height: auto;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-
-
-                            
- <title>slide 밑에 beverages 로고</title>
-  <style>
-    .center-image {
-      display: block;
-      margin: 0 auto;
-      max-width: 500px; /* 필요에 따라 크기 조절 */
-      height: auto;
-    }
-  </style>
-</head>
 <body>
 
  
@@ -551,6 +538,19 @@ transform: translateX(-225px); /* ← 이 줄을 추가하세요 */
 
 
 
+
+
+                            
+ <title>slide 밑에 beverages 로고</title>
+  <style>
+    .center-image {
+      display: block;
+      margin: 0 auto;
+      max-width: 500px; /* 필요에 따라 크기 조절 */
+      height: auto;
+    }
+  </style>
+</head>
 
 
 
