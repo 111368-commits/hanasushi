@@ -328,22 +328,6 @@
   box-shadow: 0 15px 30px rgba(0,0,0,0.25);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-이렇게 하면
-
-이미지가 틀 높이에 딱 맞고
-
-비율 유지하면서 좌우 여백 생기거나 꽉 차게 됩니다.
-
-추가) 슬라이드 너비 계산 수정
-slideWidth를 이미지의 실제 너비 + 마진으로 변경해줘야 하므로, 이미지 너비가 유동적일 땐 JS에서 직접 측정하거나 고정 너비를 지정하는 게 좋습니다.
-
-필요하면 이걸 기준으로 JS도 같이 조정해드릴 수 있습니다!
-지금 이미지가 어떤 모양으로 나오나요? 궁금하네요.
-
-
-
-
-ChatGPT에게 묻기
 
 
 
@@ -383,8 +367,16 @@ ChatGPT에게 묻기
   const slides = document.getElementById("slideContainer");
   const totalSlides = slides.children.length;
 
+  function getSlideWidth() {
+    const img = slides.querySelector("img");
+    const style = window.getComputedStyle(img);
+    const marginLeft = parseFloat(style.marginLeft);
+    const marginRight = parseFloat(style.marginRight);
+    return img.offsetWidth + marginLeft + marginRight;
+  }
+
   function showSlide(index) {
-    const slideWidth = 400 + 20; // 이미지 너비 + margin
+    const slideWidth = getSlideWidth(); // 실제 이미지 + 마진
     slides.style.transform = `translateX(-${index * slideWidth}px)`;
   }
 
@@ -398,7 +390,11 @@ ChatGPT에게 묻기
     showSlide(currentIndex);
   }
 
-  setInterval(nextSlide, 3000); // 자동 슬라이드
+  // 이미지 로딩 후 슬라이드 초기화
+  window.addEventListener("load", () => {
+    showSlide(currentIndex);
+    setInterval(nextSlide, 3000); // 자동 슬라이드
+  });
 </script>
 
 
@@ -1142,4 +1138,5 @@ ChatGPT에게 묻기
 
 </body>
 </html>
+
 
