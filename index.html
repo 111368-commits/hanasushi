@@ -244,163 +244,122 @@
 
 
 
-  <title>Hana Sushi Slider</title>
+ <title>Hana Sushi Slider</title>
   <style>
+    /* 기본 슬라이더 컨테이너 */
     .slider {
       width: 400px;
-      height 300px;
+      height: 300px;
       overflow: hidden;
       position: relative;
       margin: auto;
     }
 
-    .slides {
+    .hana-slider-3d {
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      height: 100%;
+      width: 100%;
+    }
+
+    .hana-slider-3d .slides {
       display: flex;
-      width: 400%;
-      height: 300%;
+      align-items: center; /* ✅ 이미지 세로 가운데 정렬 */
       transition: transform 0.5s ease-in-out;
+      height: 100%;
     }
 
-      .slides img {
-      width: 400px;
-      height: 300px;
-      object-fit: cover;
+    .hana-slider-3d .slides img.uniform-img {
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+      width: auto;
+      object-fit: contain;
+      margin: auto;            /* ✅ 이미지 가로 세로 모두 가운데 정렬 */
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      flex-shrink: 0;
     }
 
-    .buttons {
+    .hana-slider-3d .slides img.uniform-img:hover {
+      transform: rotateY(5deg) scale(1.05);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+    }
+
+    .hana-slider-3d .buttons {
       position: absolute;
       width: 100%;
       top: 50%;
       display: flex;
       justify-content: space-between;
       transform: translateY(-50%);
+      z-index: 10;
     }
 
-    .buttons button {
-      background-color: rgba(255, 255, 255, 0.5);
+    .hana-slider-3d .buttons button {
+      background-color: rgba(255, 255, 255, 0.7);
       border: none;
-      padding: 10px;
+      padding: 12px;
+      border-radius: 50%;
       cursor: pointer;
+      font-size: 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+      transition: background-color 0.3s;
+    }
+
+    .hana-slider-3d .buttons button:hover {
+      background-color: rgba(255, 255, 255, 1);
     }
   </style>
 </head>
 <body>
 
   <!-- ✅ 슬라이더 시작 -->
-<div class="slider hana-slider-3d">
-  <div class="slides" id="slideContainer">
-
-
-<img src="PAUL ROLL W 팻말 JPG.jpg" class="uniform-img" />  
-<img src="dodgersball1.jpg" class="uniform-img" />  
-<img src="pspng.png" class="uniform-img" />  
-<img src="g heart.png" class="uniform-img" />  
-<img src="pspng.png" class="uniform-img" />
- 
+  <div class="slider hana-slider-3d">
+    <div class="slides" id="slideContainer">
+      <img src="PAUL ROLL W 팻말 JPG.jpg" class="uniform-img" />
+      <img src="dodgersball1.jpg" class="uniform-img" />
+      <img src="pspng.png" class="uniform-img" />
+      <img src="g heart.png" class="uniform-img" />
+      <img src="pspng.png" class="uniform-img" />
+    </div>
+    <div class="buttons">
+      <button onclick="prevSlide()">⟨</button>
+      <button onclick="nextSlide()">⟩</button>
+    </div>
   </div>
-  <div class="buttons">
-    <button onclick="prevSlide()">⟨</button>
-    <button onclick="nextSlide()">⟩</button>
-  </div>
-</div>
 
-<style>
-  .hana-slider-3d {
-    perspective: 1000px;
-    transform-style: preserve-3d;
-  }
+  <script>
+    let currentIndex = 0;
+    const slides = document.getElementById("slideContainer");
+    const totalSlides = slides.children.length;
 
-  .hana-slider-3d .slides {
-    display: flex;
-    transition: transform 0.6s ease-in-out;
-  }
+    function showSlide(index) {
+      const slideWidth = document.querySelector(".slider").offsetWidth;
+      slides.style.transform = `translateX(-${index * slideWidth}px)`;
+    }
 
- .hana-slider-3d .slides {
-  height: 300px;  /* 슬라이더 틀 높이 고정 */
-}
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
 
-.hana-slider-3d .slides img {
-  height: 100%;    /* 부모 높이(300px)에 맞춤 */
-  width: auto;     /* 비율 유지하며 자동 너비 */
-  object-fit: cover;
-  margin: 0 10px;
-  border-radius: 10px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-이렇게 하면
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    }
 
-이미지가 틀 높이에 딱 맞고
+    window.addEventListener("load", () => {
+      showSlide(currentIndex);
+      setInterval(nextSlide, 3000);
+    });
 
-비율 유지하면서 좌우 여백 생기거나 꽉 차게 됩니다.
-
-추가) 슬라이드 너비 계산 수정
-slideWidth를 이미지의 실제 너비 + 마진으로 변경해줘야 하므로, 이미지 너비가 유동적일 땐 JS에서 직접 측정하거나 고정 너비를 지정하는 게 좋습니다.
-
-필요하면 이걸 기준으로 JS도 같이 조정해드릴 수 있습니다!
-지금 이미지가 어떤 모양으로 나오나요? 궁금하네요.
-
-
-
-
-ChatGPT에게 묻기
-
-
-
-  .hana-slider-3d .slides img:hover {
-    transform: rotateY(5deg) scale(1.05);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.35);
-  }
-
-  .hana-slider-3d .buttons {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 10;
-  }
-
-  .hana-slider-3d .buttons button {
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    padding: 12px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-    transition: background-color 0.3s;
-  }
-
-  .hana-slider-3d .buttons button:hover {
-    background-color: rgba(255, 255, 255, 1);
-  }
-</style>
-
-<script>
-  let currentIndex = 0;
-  const slides = document.getElementById("slideContainer");
-  const totalSlides = slides.children.length;
-
-  function showSlide(index) {
-    const slideWidth = 400 + 20; // 이미지 너비 + margin
-    slides.style.transform = `translateX(-${index * slideWidth}px)`;
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    showSlide(currentIndex);
-  }
-
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    showSlide(currentIndex);
-  }
-
-  setInterval(nextSlide, 3000); // 자동 슬라이드
-</script>
-
+    window.addEventListener("resize", () => {
+      showSlide(currentIndex);
+    });
+  </script>
 
 
 
@@ -1142,3 +1101,4 @@ ChatGPT에게 묻기
 
 </body>
 </html>
+
