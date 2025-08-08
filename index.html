@@ -387,16 +387,32 @@
   .hana-slider-3d .buttons button:hover {
     background-color: rgba(255, 255, 255, 1);
 
-  /* 우선순위 높이기 위한 명확한 선택자 지정 */
+.hana-slider-3d {
+  height: 500px; /* 기존 300px → 500px */
+}
+
 .hana-slider-3d .slides img.uniform-img {
   height: auto !important;
   width: auto !important;
-  max-width: 200%;
-  max-height: 200%;
+  max-width: 90%;
+  max-height: 90%;
   object-fit: contain !important;
   display: block;
   margin: auto;
 }
+📌 핵심 설명
+hana-slider-3d의 height를 키워야 이미지가 커질 공간이 생김
+
+max-width, max-height는 그 공간 안에서 최대한 크게 보여주는 역할
+
+이렇게 적용하면 이미지가 확실히 더 크고, 잘리지 않으며 중앙에 예쁘게 배치될 거예요.
+
+원하시면 자동으로 반응형으로 만드는 코드도 도와드릴게요.
+
+
+
+ChatGPT에게 묻기
+
   
   
 
@@ -1177,6 +1193,7 @@
 
 </body>
 </html>
+
 
 
 
