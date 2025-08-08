@@ -5,14 +5,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HANA SUSHI</title>
+  <style>
 
-	
-	<style>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		
-		
-  body {
+<--     돋보기  --\>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .search-container {
+      position: relative;
+      width: 250px;
+      margin: 20px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 8px 30px 8px 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999;
+      cursor: pointer;
+    }
+
+
+/* 돋보기 끝 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f9f5f1;
@@ -217,13 +268,31 @@
       margin-top: 40px;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </style>
 </head>
 <body>
 
   <header>
     <div class="logo">
-      <img src="hanasushilogoPNG.png" alt="HANA SUSHI restaurant logo" />
+      <img src="hanasushilogopng.png" alt="HANA SUSHI restaurant logo" />
     </div>
     <div class="phone-number">📞 (805) 520-1333 / (805) 520-1313</div>
     <nav>
@@ -243,12 +312,15 @@
 						 <!-- slide 시작 -->
 
 
-
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
   <title>Hana Sushi Slider</title>
   <style>
     .slider {
       width: 400px;
-      height 300px;
+      height: 300px;
       overflow: hidden;
       position: relative;
       margin: auto;
@@ -256,12 +328,12 @@
 
     .slides {
       display: flex;
-      width: 400%;
-      height: 300%;
+      width: 100%;
+      height: 100%;
       transition: transform 0.5s ease-in-out;
     }
 
-      .slides img {
+      slides img {
       width: 400px;
       height: 300px;
       object-fit: cover;
@@ -291,12 +363,10 @@
   <div class="slides" id="slideContainer">
 
 
-<img src="PAUL ROLL W 팻말 JPG.jpg" class="uniform-img" />  
-<img src="dodgersball1.jpg" class="uniform-img" />  
-<img src="pspng.png" class="uniform-img" />  
-<img src="g heart.png" class="uniform-img" />  
-<img src="pspng.png" class="uniform-img" />
- 
+    <img src="C:\041425\dodgersball1.jpg" />   
+    <img src="C:\Users\Owner\Pictures\t.jpg" />
+    <img src="C:\Users\Owner\Pictures\o.jpg" />
+    <img src="C:\Users\Owner\Pictures\m.jpg" />
   </div>
   <div class="buttons">
     <button onclick="prevSlide()">⟨</button>
@@ -315,21 +385,16 @@
     transition: transform 0.6s ease-in-out;
   }
 
- .hana-slider-3d .slides {
-  height: 300px;  /* 슬라이더 틀 높이 고정 */
-}
-
-.hana-slider-3d .slides img {
-  height: 100%;    /* 부모 높이(300px)에 맞춤 */
-  width: auto;     /* 비율 유지하며 자동 너비 */
-  object-fit: cover;
-  margin: 0 10px;
-  border-radius: 10px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-
+  .hana-slider-3d .slides img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    transform: rotateY(0deg);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
 
   .hana-slider-3d .slides img:hover {
     transform: rotateY(5deg) scale(1.05);
@@ -392,208 +457,29 @@
 
 
 
+/* 돋보기  2  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Dessert section 시작 -->
-
-
-<head>
-  <meta charset="UTF-8" />
-  <title>왼쪽, 가운데, 오른쪽 같은 메뉴 박스</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      padding: 40px;
-    }
-
-    .three-columns {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      max-width: 1200px;
-      margin: 60px auto 0;
-      flex-wrap: wrap; /* 줄바꿈 허용 */
-    }
-
-    .menu-box {
-      flex: 1;
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .menu-box img.logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    .menu-box .menu-text h3 {
-      margin: 20px 0;
-      font-size: 16px;
-      border-bottom: 1px dashed #ccc;
-      padding-bottom: 4px;
-    }
-
-    .price {
-      float: right;
-      color: #555;
-    }
-
-    .menu-box img.menu-image {
-      width: 100px;
-      height: auto;
-      margin-top: 20px;
-    /* ✅ 추가: 모바일 대응 */
-  @media (max-width: 768px) {
-    .three-columns {
-      flex-direction: column;
-      align-items: center;
-      margin: 20px auto;
-     }
-     .menu-box {
-      width: 90%;
-      max-width: 400px;
-      margin-bottom: 30px;
-    }
-  }
-  </style>
-</head>
-
-
-<body>
-
-
-
-
-  <div class="three-columns">
-
-    <!-- 왼쪽 박스 -->
-    <div class="menu-box">
-      <img src="성조기 beverages1.png" alt="Beverages" class="center-image">
-<img src="coke.jpg" alt="Yellowtail Sushi" style="width: 100px; height: 100px;" />
-      <div class="menu-text">
-
-        <h3>Soda <span class="price">$3.5</span></h3>
-        <h3>Hot Tea <span class="price">$2.5</span></h3>
-        <h3>Ice Tea <span class="price">$2.75</span></h3>
-        <h3>Lemonade <span class="price">$3.75</span></h3>
-        <h3>Perrier Water <span class="price">$5</span></h3>
-        <h3>Ramune <span class="price">$5</span></h3>
-        <h3>Arnold Palmer <span class="price">$3.75</span></h3>
-      </div>
-
-    </div>
- 
-    <!-- 가운데 박스 -->
-
-    <div class="menu-box">
-
-     <img src="성조기 beverages11.png" alt="Beverages" class="center-image">
-<img src="cheesecake2.jpg" alt="Yellowtail Sushi" style="width: 100px; height: 100px;" />
-      <div class="menu-text">
-        <h3>Green Tea Ice Cream <span class="price">$4.5</span></h3>
-        <h3>Banana Tempura <span class="price">$3.5</span></h3>
-        <h3>Tempura Ice Cream <span class="price">$5.95</span></h3>
-        <h3>Mochi Ice Cream <span class="price">$3.5</span></h3>
-        <h3>Cheese Cake<span class="price">$6.5</span></h3>
-       
-      </div>
-      
-    </div>
-
-    <!-- 오른쪽 박스 -->
-    <div class="menu-box">
-      <img src="성조기 beverages111.png" alt="Beverages" class="center-image">
-
-<img src="salad1.jpg" alt="Yellowtail Sushi" style="width: 100px; height: 100px;" />      <div class="menu-text">
-        <h3>Green Salad <span class="price">$6.5</span></h3>
-        <h3>Cucumber Salad <span class="price">$5.5</span></h3>
-        <h3>Seaweed Salad <span class="price">$8.25</span></h3>
-        <h3>Octopus Salad <span class="price">$8.25</span></h3>
-        <h3>Salmon Skin Salad <span class="price">$8</span></h3>
-        <h3>Sashimi Salad <span class="price">$18.95</span></h3>
-   
-      </div>
-     
-    </div>
-
+<div class="search-container">
+    <input type="text" class="search-input" placeholder="검색어를 입력하세요">
+    <i class="fas fa-search search-icon"></i>
   </div>
 
-</body>
+
+
+/* 돋보기 끝 */
 
 
 
 
 
 
-<body>
+
+
+
 
  
-</div>
-    </div>
-
-
-
-<!-- Dessert section 끝 -->
-
-
-
-
-
-
 
                             
- <title>slide 밑에 beverages 로고</title>
-  <style>
-    .center-image {
-      display: block;
-      margin: 0 auto;
-      max-width: 500px; /* 필요에 따라 크기 조절 */
-      height: auto;
-    }
-  </style>
-</head>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -607,7 +493,7 @@
  <section class="menu-section" id="menu">
 
   <h2>SUSHI</h2>
-<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
+
   <div class="menu-container">
     <div class="menu-item">
       <div class="menu-text">
@@ -619,7 +505,7 @@
         <h3>Salmon  <span class="price">$6.25</span></h3>
       </div>
       <div class="menu-image">
-        <img src="tunapng.png" alt="Yellowtail Sushi" style="width: 100px; height: auto;" />
+        <img src="C:\png files\tunapng.png" alt="Yellowtail Sushi" style="width: 100px; height: auto;" />
 </div>
     </div>
 
@@ -634,7 +520,7 @@
         <h3>Egg  <span class="price">$7.50</span></h3>        
       </div>
       <div class="menu-image">
-       <img src="seabass.png" alt="Yellowtail Sushi" style="width: 100px; height: auto;" />
+       <img src="C:\Users\Owner\Pictures\seabass.png" alt="Yellowtail Sushi" style="width: 100px; height: auto;" />
       </div>  
     </div>
 
@@ -648,7 +534,7 @@
         <h3>Quail Egg <span class="price">$2.25</span></h3>
       </div>
       <div class="menu-image">
-       <img src="salmon.png" alt="Yellowtail Sushi" style="width: 100px; height: auto;" />
+       <img src="C:\Users\Owner\Pictures\salmon.png" alt="Yellowtail Sushi" style="width: 100px; height: auto;" />
       </div>
     </div>
 
@@ -661,7 +547,7 @@
 
       </div>
       <div class="menu-image">
-        <img src="aji.png" alt="Yellowtail Sushi" style="width: 100px; height: auto;" />
+        <img src="C:\Users\Owner\Pictures\aji.png" alt="Yellowtail Sushi" style="width: 100px; height: auto;" />
       </div>
     </div>
 
@@ -679,8 +565,8 @@
 
   
 
-   <h2>SASHIMI</h2>
-<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
+  <h2>SASHIMI</h2>
+
   <div class="menu-container">
   <div class="menu-container">
     <div class="menu-item">
@@ -693,7 +579,7 @@
         <h3>Salmon  <span class="price">$17.95</span></h3>
       </div>
       <div class="menu-image">
-       <img src="tuna%20sashimi%20(3).jpg" alt="Tuna Sashimi" style="width: 60px; height: auto;" />
+        <img src="C:\Users\Owner\Pictures\Tunasashimi.png") alt="Tuna Sashimi" style="width: 60px; height: auto;" />
 </div>
     </div>
 
@@ -706,8 +592,10 @@
         <h3>Squid  <span class="price">$11.95</span></h3>        
 
       </div>
-	<div class="menu-image">
-       <img src="Salmon.jpg" alt="Salmon Sashimi" style="width: 60px; height: auto;" />
+      <div class="menu-image">
+  
+ <img src="C:\Users\Owner\Pictures\salmon.jpg" alt="Salmon Sushi" style="width: 60px; height: auto;" />      
+ 
       </div>  
     </div>
 
@@ -719,7 +607,7 @@
 
       </div>
       <div class="menu-image">
-       <img src="amaebi.jpg" alt="Yellowtail Sushi" style="width: 80px; height: auto;" />
+       <img src="C:\Users\Owner\Pictures\amaebi.jpg" alt="Yellowtail Sushi" style="width: 80px; height: auto;" />
       </div>
     </div>
 
@@ -732,373 +620,14 @@
 
       </div>
       <div class="menu-image">
-        <img src="ajisashimi.jpg" alt="Yellowtail Sushi" style="width: 60px; height: auto;" />
+        <img src="C:\Users\Owner\Pictures\ajisashimi.jpg" alt="Yellowtail Sushi" style="width: 60px; height: auto;" />
       </div>
-
 
 
   </section>
 
 
- 										<!-- regular rolls 시작 -->							
-
-
-
-<!-- ✅ 여기에 regular rolls 섹션 추가됨 -->
-  <section class="menu-section" id="sushi2">
-    <h2> Regular ROlls </h2>
-<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
-    <div class="menu-container">
-      <div class="menu-item">
-        <div class="menu-text">
-          <h3> Vegetable Roll <span class="price">$6.95</span></h3>
-          <h3> Avocado Roll   <span class="price">$6.95</span></h3>
-          <h3> Cucumber Roll <span class="price">$6.50</span></h3>
-      
-        </div>
-        <div class="menu-image">
-          <img src="avocado roll.jpg" alt="avocado roll" style="width: 100px; height: auto;" />
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">          
-          <h3> Tuna Roll <span class="price">$6.25</span></h3>
-    	  <h3><span style="margin-right: 12px;"> Scallop Roll </span><span class="price">$6.95</span></h3> 	  
-          <h3> YellowTail Roll <span class="price">$6.25</span></h3>
-          
-        </div>
-        <div class="menu-image">
-         <img src="tuna roll.jpg" alt="tuna roll.jpg" style="width: 100px; height: auto;" />
-        </div>  
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">
-	  <h3> California Roll <span class="price">$6.95</span></h3>
-          <h3> Spicy Tuna Roll <span class="price">$6.95</span></h3>
-          <h3> Fresh Water Eel <span class="price">$6.50</span></h3>
-        </div>
-        <div class="menu-image">
-          <img src="spicy tuna roll.jpg" alt="spicy tuna roll.jpg" style="width: 100px; height: auto;" />
-	 
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">
-          <h3> Mexican Roll <span class="price">$6.25</span></h3>
-          <h3> Salmon Roll <span class="price">$6.50</span></h3>
-          <h3> Salmon Skin Roll <span class="price">$6.25</span></h3>
-        </div>
-        <div class="menu-image">
-           <img src="salmon roll.jpg" alt="salmon roll.jpg" style="width: 100px; height: auto;" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-
- 										<!-- Regular Rolls  끝 -->
-
-
-
- 										<!-- Baked Rolls 시작 -->							
-
-
-
-<!-- ✅ 여기에 regular rolls 섹션 추가됨 -->
-  <section class="menu-section" id="sushi2">
-    <h2> Baked ROlls </h2>
-<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
-    <div class="menu-container">
-      <div class="menu-item">
-        <div class="menu-text">
-          <h3>  Dynamite Roll <span class="price">$13.95</span></h3>
-         Baked Scallop, Smelt Egg, Mushroom on top of California roll
-      
-        </div>
-        <div class="menu-image">
-          <img src="IMG_0484.JPG" alt="Dynamite roll" style="width: 100px; height: auto;" />
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">          
-    	  <h3><span style="margin-right: 12px;"> Baked Salmon Roll </span><span class="price">$14</span></h3> 	  
-     	  California Roll ,Salmon and Bake
-          
-        </div>
-        <div class="menu-image">
-         <img src="baked salmon roll.png" alt="tuna roll.jpg" style="width: 100px; height: auto;" />
-        </div>  
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">
-	  <h3> Volcano Roll <span class="price">$14.50</span></h3>
-        California with baked salmon fried scallop on top
-        </div>
-        <div class="menu-image">
-          <img src="IMG_0485.jpg" alt="vocano rolll" style="width: 100px; height: auto;" />
-	 
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">
-        
-          <h3> VIP roll <span class="price">$14</span></h3>
-	  Tuna, Salmon, White Fish,Scallop Roll up and Deep Fried
-        </div>
-        <div class="menu-image">
-           <img src="IMG_0580.JPG" alt="salmon roll.jpg" style="width: 100px; height: auto;" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-
- 										<!-- Baked Rolls  끝 -->
-
-
- 										<!-- No Rice  시작 -->							
-
-
-
-<!-- ✅ 여기에 regular rolls 섹션 추가됨 -->
-  <section class="menu-section" id="sushi2">
-    <h2> NO Rice </h2>
-<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
-    <div class="menu-container">
-      <div class="menu-item">
-        <div class="menu-text">
-          <h3>  Green Heart : <span class="price">$12.95</span></h3>
-      Spicy Tuna,  Wrapped Avocado  
-      
-        </div>
-        <div class="menu-image">
-          <img src="IMG_0484.JPG" alt="Green Heart" style="width: 100px; height: auto;" />
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">          
-    	  <h3><span style="margin-right: 12px;"> Oh Honey Roll </span><span class="price">$16.95</span></h3> 	  
-     	  Spicy Tuna,  Crab,  Wrapped  Tuna 
-          
-        </div>
-        <div class="menu-image">
-         <img src="baked salmon roll.png" alt="tuna roll.jpg" style="width: 100px; height: auto;" />
-        </div>  
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">
-	  <h3>  Orange Roll <span class="price">$16.95</span></h3>
-        Spicy  Crab, Avocado  Wrapped  Salmon  
-        </div>
-        <div class="menu-image">
-          <img src="IMG_0485.jpg" alt="vocano rolll" style="width: 100px; height: auto;" />
-	 
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">
-        
-          <h3>  Paul Roll <span class="price">$14.95</span></h3>
-	Tuna, Shrimp, Salmon, Albarcore , Avacado, Crab, Radish Wrapped Cucumber 
-        </div>
-        <div class="menu-image">
-           <img src="PAUL ROLL W 팻말 JPG.jpg" alt="salmon roll.jpg" style="width: 100px; height: auto;" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-
-
-
-
- 										<!-- No Rice   끝 -->
-
-								<!-- Tempura Rolls  시작 -->
-
-
-<!-- ✅ 여기에 Temura rolls 섹션 추가됨 -->
-  <section class="menu-section" id="sushi2">
-    <h2> Tempura ROlls </h2>
-<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
-    <div class="menu-container">
-      <div class="menu-item">
-        <div class="menu-text">
-          <h3>  Country Wide Roll <span class="price">$14.50</span></h3>
-          Shrimp Tempura, Cucumber with Avocado and Spicy Crab on Top
-          <h3>  Crunch Roll <span class="price">$13.50</span></h3>
-           Shrimp Tempura, Crab, Cucumber and Tempura Flakes on Top
-	  <h3> Crunch Scallop Roll  <span class="price">$14.50</span></h3>
-            Deep Fried Jumbo Scallop with Crab,Avocado,and Cucumber     
-        </div>
-        <div class="menu-image">
-          <img src="IMG_0484.JPG" alt="Dynamite roll" style="width: 100px; height: auto;" />
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">          
-    	  <h3><span style="margin-right: 12px;">    Fire Roll </span><span class="price">$14.50</span></h3> 	  
-     	    Spicy Tuna, Shrimp Tempura, Cucumber and Seared Albarcore  
-          <h3>  Freewilly Roll <span class="price">$14.50</span></h3>
-          Shrimp Temupura, Spicy Crab, Cucumber, and Spicy Tuna on Top 
-          <h3>   Green dragon Roll <span class="price">$14.50</span></h3>
-           Shrimp Tempura, Crab, Cucumber,and Avocado  Tempura Flakes on Top 
-	 
-        </div>
-        <div class="menu-image">
-         <img src="baked salmon roll.png" alt="tuna roll.jpg" style="width: 100px; height: auto;" />
-        </div>  
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">
-	  <h3>  Love Roll <span class="price">$15.95</span></h3>
-         Shrimp Tempura, Spicy Tuna,  Avocado Crab  Roll Up  Soy Paper 
-
-	 <h3>  Madera Rol <span class="price">$14.50</span></h3>
-        Shrimp Tempura, Avocado,Cucumber Spicy Tuna,Spicy Crab,Scallop on Top 
-
-	 <h3>  Piano Roll <span class="price">$15.95</span></h3>
-          Shrimp Tempura, Spicy Crab, Cucumber,  and  Avocado on Top 
-	
-        </div>
-        <div class="menu-image">
-          <img src="IMG_0485.jpg" alt="vocano rolll" style="width: 100px; height: auto;" />
-	 
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">
-        
-          <h3>  Spider Roll <span class="price">$16.95</span></h3>
-          Soft shell Crab, Gobo, Avocado, Cucumber  Crabmeat Roll Up 
- 	  
-        </div>
-        <div class="menu-image">
-           <img src="IMG_0580.jpg" alt="salmon roll.jpg" style="width: 100px; height: auto;" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-
-								<!-- Tempura Rolls  끝 -->
-
-
-								<!-- Classic Rolls  시작 -->
-
-
-<!-- ✅ 여기에 regular rolls 섹션 추가됨 -->
-  <section class="menu-section" id="sushi2">
-    <h2> Classic ROlls </h2>
-<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
-    <div class="menu-container">
-      <div class="menu-item">
-        <div class="menu-text">
-          <h3>  911 Roll <span class="price">$13.95</span></h3>
-         Spicy Tuna, Cucumber, & Avocado on Top 
-          <h3>  Albarcore Delight Roll <span class="price">$14.50</span></h3>
-         Spicy Tuna, Cucumber, & Avocado on Top 
-	  <h3>  Atlantis Roll <span class="price">$14.50</span></h3>
-         Spicy Tuna,Avocado,and Shrimp & Salmon on Top
-        </div>
-        <div class="menu-image">
-          <img src="IMG_0484.JPG" alt="Dynamite roll" style="width: 100px; height: auto;" />
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">          
-    	  <h3><span style="margin-right: 12px;">   Caterpillar Roll </span><span class="price">$14.50</span></h3> 	  
-     	    Baked Fresh Water Eel, Cucumber and Avocado on Top
-	  <h3><span style="margin-right: 12px;">    Dragon Roll </span><span class="price">$14.50</span></h3> 	  
-     	     Eel and Avocado on Top of California Roll
-	  <h3><span style="margin-right: 12px;">    In & Out Salmon Roll </span><span class="price">$14.95</span></h3> 	  
-     	    Inside Salmon, and Out  Salmon 
-        </div>
-        <div class="menu-image">
-         <img src="baked salmon roll.png" alt="tuna roll.jpg" style="width: 100px; height: auto;" />
-        </div>  
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">
-	  <h3> Lobster Roll <span class="price">$14.95</span></h3>
-        Baked Lobster, Csucumber, Gobo, and Avocado on Top
-	  <h3> Philadelphia Roll <span class="price">$14.95</span></h3>
-        Cream Cheese, Avocado and Salmon on Top
-	  <h3>Rainbow Roll <span class="price">$14.50</span></h3>
-        Tuna, Salmon, White Fish, Shrimp, Albarcore, Avocado Top on Californa roll
-
-
-        </div>
-        <div class="menu-image">
-          <img src="IMG_0485.jpg" alt="vocano rolll" style="width: 100px; height: auto;" />
-	 
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-text">
-        
-	  <h3> Red Dragon  <span class="price">$14.50</span></h3>
-       		 Cream Cheese, Avocado and Salmon on Top
-          <h3>  Rock star Roll <span class="price">$14.75</span></h3>
-		 Spicy Tuna,Spicy Scallop, Cucumber, Yellowtail, Shrimp on Top s
-	  <h3>  Special spicy Tuna Roll  <span class="price">$14.95</span></h3>
-		 Spicy Tuna, Cilantro, Cucumber, Seared Tuna on Top s
-
-        </div>
-        <div class="menu-image">
-           <img src="IMG_0580.jpg" alt="salmon roll.jpg" style="width: 100px; height: auto;" />
-        </div>
-      </div>
-    </div>
-
-
-  </section>
-
-
-
-
-
-
-
-								<!-- Classic Rolls  끝 -->
-
-
-
+							
 
 
   </div>
