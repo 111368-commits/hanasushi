@@ -267,11 +267,12 @@
       align-items: center; /* ✅ 이미지 세로 가운데 정렬 */
       transition: transform 0.5s ease-in-out;
       height: 100%;
+	  width: max-content; 	
     }
 
     .hana-slider-3d .slides img.uniform-img {
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
       height: auto;
       width: auto;
       object-fit: contain;
@@ -331,63 +332,7 @@
     </div>
   </div>
 
-  <script>
-    let currentIndex = 0;
-    const slides = document.getElementById("slideContainer");
-    const totalSlides = slides.children.length;
-
-    function showSlide(index) {
-      const slideWidth = document.querySelector(".slider").offsetWidth;
-      slides.style.transform = `translateX(-${index * slideWidth}px)`;
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      showSlide(currentIndex);
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      showSlide(currentIndex);
-    }
-
-    window.addEventListener("load", () => {
-      showSlide(currentIndex);
-      setInterval(nextSlide, 3000);
-    });
-
-    window.addEventListener("resize", () => {
-      showSlide(currentIndex);
-    });
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
@@ -1104,6 +1049,7 @@
 
 </body>
 </html>
+
 
 
 
