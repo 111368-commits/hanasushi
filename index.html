@@ -404,13 +404,33 @@
   }
   </style>
 </head>
+<script>
+  let currentIndex = 0;
 
+  function updateSlidePosition() {
+    const slideContainer = document.getElementById("slideContainer");
+    const slideWidth = slideContainer.querySelector('img').clientWidth;
+    slideContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
 
-<body>
+  function prevSlide() {
+    const totalSlides = document.querySelectorAll('.uniform-img').length;
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlidePosition();
+  }
 
+  function nextSlide() {
+    const totalSlides = document.querySelectorAll('.uniform-img').length;
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlidePosition();
+  }
 
+  window.addEventListener('load', updateSlidePosition);
+  window.addEventListener('resize', updateSlidePosition);
+</script>
 
-
+	
+	<body>
   <div class="three-columns">
 
     <!-- 왼쪽 박스 -->
@@ -1049,6 +1069,7 @@
 
 </body>
 </html>
+
 
 
 
