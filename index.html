@@ -429,8 +429,12 @@
 <!-- Dessert section ?쒖옉 -->
 
 
-<head>
+<!-- Dessert section 시작 -->
 
+
+<head>
+  <meta charset="UTF-8" />
+  <title>왼쪽, 가운데, 오른쪽 같은 메뉴 박스</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -444,7 +448,7 @@
       gap: 20px;
       max-width: 1200px;
       margin: 60px auto 0;
-      flex-wrap: wrap; /* 以꾨컮轅??덉슜 */
+      flex-wrap: wrap; /* 줄바꿈 허용 */
     }
 
     .menu-box {
@@ -478,7 +482,7 @@
       width: 100px;
       height: auto;
       margin-top: 20px;
-    /* ??異붽?: 紐⑤컮?????*/
+    /* ✅ 추가: 모바일 대응 */
   @media (max-width: 768px) {
     .three-columns {
       flex-direction: column;
@@ -502,9 +506,9 @@
 
   <div class="three-columns">
 
-    <!-- ?쇱そ 諛뺤뒪 -->
+    <!-- 왼쪽 박스 -->
     <div class="menu-box">
-      <img src="?깆“湲?beverages1.png" alt="Beverages" class="center-image">
+      <img src="성조기 beverages1.png" alt="Beverages" class="center-image">
 <img src="coke.jpg" alt="Yellowtail Sushi" style="width: 100px; height: 100px;" />
       <div class="menu-text">
 
@@ -519,11 +523,11 @@
 
     </div>
  
-    <!-- 媛?대뜲 諛뺤뒪 -->
+    <!-- 가운데 박스 -->
 
     <div class="menu-box">
 
-     <img src="?깆“湲?beverages11.png" alt="Beverages" class="center-image">
+     <img src="성조기 beverages11.png" alt="Beverages" class="center-image">
 <img src="cheesecake2.jpg" alt="Yellowtail Sushi" style="width: 100px; height: 100px;" />
       <div class="menu-text">
         <h3>Green Tea Ice Cream <span class="price">$4.5</span></h3>
@@ -536,9 +540,9 @@
       
     </div>
 
-    <!-- ?ㅻⅨ履?諛뺤뒪 -->
+    <!-- 오른쪽 박스 -->
     <div class="menu-box">
-      <img src="?깆“湲?beverages111.png" alt="Beverages" class="center-image">
+      <img src="성조기 beverages111.png" alt="Beverages" class="center-image">
 
 <img src="salad1.jpg" alt="Yellowtail Sushi" style="width: 100px; height: 100px;" />      <div class="menu-text">
         <h3>Green Salad <span class="price">$6.5</span></h3>
@@ -569,7 +573,7 @@
 
 
 
-<!-- Dessert section ??-->
+<!-- Dessert section 끝 -->
 
 
 
@@ -578,12 +582,12 @@
 
 
                             
- <title>slide 諛묒뿉 beverages 濡쒓퀬</title>
+ <title>slide 밑에 beverages 로고</title>
   <style>
     .center-image {
       display: block;
       margin: 0 auto;
-      max-width: 500px; /* ?꾩슂???곕씪 ?ш린 議곗젅 */
+      max-width: 500px; /* 필요에 따라 크기 조절 */
       height: auto;
     }
   </style>
@@ -613,13 +617,13 @@
 
 
 
-  <!-- 硫붾돱 ?뱀뀡, ?ъ떆誘??뱀뀡 ?깆? 洹몃?濡??좎? -->
-  <!-- 以묐났??id="menu"??HTML 洹쒖튃???섎굹留?議댁옱?댁빞 ?섎?濡?id???섎굹留??좎??섍굅??援щ텇 ?꾩슂 -->
- <!-- ?덉떆濡??섎굹??menu-section留??좎? -->
+  <!-- 메뉴 섹션, 사시미 섹션 등은 그대로 유지 -->
+  <!-- 중복된 id="menu"는 HTML 규칙상 하나만 존재해야 하므로 id는 하나만 유지하거나 구분 필요 -->
+ <!-- 예시로 하나의 menu-section만 유지 -->
  <section class="menu-section" id="menu">
 
   <h2>SUSHI</h2>
-<img src="?깆“湲?beverages1 copy.png" alt="Beverages" class="center-image">
+<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
   <div class="menu-container">
     <div class="menu-item">
       <div class="menu-text">
@@ -679,20 +683,20 @@
 
 
 
-								 <!-- ?ъ떆誘멥뀭?쒖옉 -->
+								 <!-- 사시미ㅣ시작 -->
 
 
      
-   <!-- 硫붾돱 ?뱀뀡, ?ъ떆誘??뱀뀡 ?깆? 洹몃?濡??좎? -->
-  <!-- 以묐났??id="menu"??HTML 洹쒖튃???섎굹留?議댁옱?댁빞 ?섎?濡?id???섎굹留??좎??섍굅??援щ텇 ?꾩슂 -->
- <!-- ?덉떆濡??섎굹??menu-section留??좎? -->
+   <!-- 메뉴 섹션, 사시미 섹션 등은 그대로 유지 -->
+  <!-- 중복된 id="menu"는 HTML 규칙상 하나만 존재해야 하므로 id는 하나만 유지하거나 구분 필요 -->
+ <!-- 예시로 하나의 menu-section만 유지 -->
  <section class="menu-section" id="menu">
 
 
   
 
    <h2>SASHIMI</h2>
-<img src="?깆“湲?beverages1 copy.png" alt="Beverages" class="center-image">
+<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
   <div class="menu-container">
   <div class="menu-container">
     <div class="menu-item">
@@ -752,14 +756,14 @@
   </section>
 
 
- 										<!-- regular rolls ?쒖옉 -->							
+ 										<!-- regular rolls 시작 -->							
 
 
 
-<!-- ???ш린??regular rolls ?뱀뀡 異붽???-->
+<!-- ✅ 여기에 regular rolls 섹션 추가됨 -->
   <section class="menu-section" id="sushi2">
     <h2> Regular ROlls </h2>
-<img src="?깆“湲?beverages1 copy.png" alt="Beverages" class="center-image">
+<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
     <div class="menu-container">
       <div class="menu-item">
         <div class="menu-text">
@@ -816,18 +820,18 @@
 
 
 
- 										<!-- Regular Rolls  ??-->
+ 										<!-- Regular Rolls  끝 -->
 
 
 
- 										<!-- Baked Rolls ?쒖옉 -->							
+ 										<!-- Baked Rolls 시작 -->							
 
 
 
-<!-- ???ш린??regular rolls ?뱀뀡 異붽???-->
+<!-- ✅ 여기에 regular rolls 섹션 추가됨 -->
   <section class="menu-section" id="sushi2">
     <h2> Baked ROlls </h2>
-<img src="?깆“湲?beverages1 copy.png" alt="Beverages" class="center-image">
+<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
     <div class="menu-container">
       <div class="menu-item">
         <div class="menu-text">
@@ -881,17 +885,17 @@
 
 
 
- 										<!-- Baked Rolls  ??-->
+ 										<!-- Baked Rolls  끝 -->
 
 
- 										<!-- No Rice  ?쒖옉 -->							
+ 										<!-- No Rice  시작 -->							
 
 
 
-<!-- ???ш린??regular rolls ?뱀뀡 異붽???-->
+<!-- ✅ 여기에 regular rolls 섹션 추가됨 -->
   <section class="menu-section" id="sushi2">
     <h2> NO Rice </h2>
-<img src="?깆“湲?beverages1 copy.png" alt="Beverages" class="center-image">
+<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
     <div class="menu-container">
       <div class="menu-item">
         <div class="menu-text">
@@ -933,7 +937,7 @@
 	Tuna, Shrimp, Salmon, Albarcore , Avacado, Crab, Radish Wrapped Cucumber 
         </div>
         <div class="menu-image">
-           <img src="PAUL ROLL W ?삳쭚 JPG.jpg" alt="salmon roll.jpg" style="width: 100px; height: auto;" />
+           <img src="PAUL ROLL W 팻말 JPG.jpg" alt="salmon roll.jpg" style="width: 100px; height: auto;" />
         </div>
       </div>
     </div>
@@ -948,15 +952,15 @@
 
 
 
- 										<!-- No Rice   ??-->
+ 										<!-- No Rice   끝 -->
 
-								<!-- Tempura Rolls  ?쒖옉 -->
+								<!-- Tempura Rolls  시작 -->
 
 
-<!-- ???ш린??Temura rolls ?뱀뀡 異붽???-->
+<!-- ✅ 여기에 Temura rolls 섹션 추가됨 -->
   <section class="menu-section" id="sushi2">
     <h2> Tempura ROlls </h2>
-<img src="?깆“湲?beverages1 copy.png" alt="Beverages" class="center-image">
+<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
     <div class="menu-container">
       <div class="menu-item">
         <div class="menu-text">
@@ -1025,16 +1029,16 @@
 
 
 
-								<!-- Tempura Rolls  ??-->
+								<!-- Tempura Rolls  끝 -->
 
 
-								<!-- Classic Rolls  ?쒖옉 -->
+								<!-- Classic Rolls  시작 -->
 
 
-<!-- ???ш린??regular rolls ?뱀뀡 異붽???-->
+<!-- ✅ 여기에 regular rolls 섹션 추가됨 -->
   <section class="menu-section" id="sushi2">
     <h2> Classic ROlls </h2>
-<img src="?깆“湲?beverages1 copy.png" alt="Beverages" class="center-image">
+<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
     <div class="menu-container">
       <div class="menu-item">
         <div class="menu-text">
@@ -1107,7 +1111,7 @@
 
 
 
-								<!-- Classic Rolls  ??-->
+								<!-- Classic Rolls  끝 -->
 
 
 
@@ -1138,4 +1142,5 @@
 
 </body>
 </html>
+
 
