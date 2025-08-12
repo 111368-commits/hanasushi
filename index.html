@@ -61,7 +61,7 @@
       cursor: pointer;
     }
 
-    /* ???ㅻ퉬寃뚯씠???좊땲硫붿씠??異붽? */
+    /* ✅ 네비게이션 애니메이션 추가 */
     nav {
       margin-top: 15px;
       display: flex;
@@ -225,7 +225,7 @@
     <div class="logo">
       <img src="hanasushilogoPNG.png" alt="HANA SUSHI restaurant logo" />
     </div>
-    <div class="phone-number">?뱸 (805) 520-1333 / (805) 520-1313</div>
+    <div class="phone-number">📞 (805) 520-1333 / (805) 520-1313</div>
     <nav>
       <a href="#home">Home</a>
       <a href="#menu">Menu</a>
@@ -240,127 +240,126 @@
 
 
 
-						 <!-- slide ?쒖옉 -->
+						 <!-- slide 시작 -->
 
 
 
-  <title>Hana Sushi Slider</title>
+ <title>Hana Sushi Slider</title>
   <style>
+    /* 기본 슬라이더 컨테이너 */
     .slider {
       width: 400px;
-      height 300px;
+      height: 300px;
       overflow: hidden;
       position: relative;
       margin: auto;
     }
 
-    .slides {
+    .hana-slider-3d {
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      height: 100%;
+      width: 100%;
+    }
+
+    .hana-slider-3d .slides {
       display: flex;
-      width: 400%;
-      height: 300%;
+      align-items: center; /* ✅ 이미지 세로 가운데 정렬 */
       transition: transform 0.5s ease-in-out;
+      height: 100%;
     }
 
-      .slides img {
-      width: 400px;
-      height: 300px;
-      object-fit: cover;
+    .hana-slider-3d .slides img.uniform-img {
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+      width: auto;
+      object-fit: contain;
+      margin: auto;            /* ✅ 이미지 가로 세로 모두 가운데 정렬 */
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      flex-shrink: 0;
     }
 
-    .buttons {
+    .hana-slider-3d .slides img.uniform-img:hover {
+      transform: rotateY(5deg) scale(1.05);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+    }
+
+    .hana-slider-3d .buttons {
       position: absolute;
       width: 100%;
       top: 50%;
       display: flex;
       justify-content: space-between;
       transform: translateY(-50%);
+      z-index: 10;
     }
 
-    .buttons button {
-      background-color: rgba(255, 255, 255, 0.5);
+    .hana-slider-3d .buttons button {
+      background-color: rgba(255, 255, 255, 0.7);
       border: none;
-      padding: 10px;
+      padding: 12px;
+      border-radius: 50%;
       cursor: pointer;
+      font-size: 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+      transition: background-color 0.3s;
+    }
+
+    .hana-slider-3d .buttons button:hover {
+      background-color: rgba(255, 255, 255, 1);
     }
   </style>
 </head>
 <body>
 
-  <!-- ???щ씪?대뜑 ?쒖옉 -->
-<div class="slider hana-slider-3d">
-  <div class="slides" id="slideContainer">
-
-
-<img src="PAUL ROLL W ?삳쭚 JPG.jpg" class="uniform-img" />  
-<img src="dodgersball1.jpg" class="uniform-img" />  
-<img src="pspng.png" class="uniform-img" />  
-<img src="g heart.png" class="uniform-img" />  
-<img src="pspng.png" class="uniform-img" />
- 
+  <!-- ✅ 슬라이더 시작 -->
+  <div class="slider hana-slider-3d">
+    <div class="slides" id="slideContainer">
+      <img src="PAUL ROLL W 팻말 JPG.jpg" class="uniform-img" />
+      <img src="dodgersball1.jpg" class="uniform-img" />
+      <img src="pspng.png" class="uniform-img" />
+      <img src="g heart.png" class="uniform-img" />
+      <img src="pspng.png" class="uniform-img" />
+    </div>
+    <div class="buttons">
+      <button onclick="prevSlide()">⟨</button>
+      <button onclick="nextSlide()">⟩</button>
+    </div>
   </div>
-  <div class="buttons">
-    <button onclick="prevSlide()">??/button>
-    <button onclick="nextSlide()">??/button>
-  </div>
-</div>
 
-<style>
-  .hana-slider-3d {
-    perspective: 1000px;
-    transform-style: preserve-3d;
-  }
+  <script>
+    let currentIndex = 0;
+    const slides = document.getElementById("slideContainer");
+    const totalSlides = slides.children.length;
 
-  .hana-slider-3d .slides {
-    display: flex;
-    transition: transform 0.6s ease-in-out;
-  }
+    function showSlide(index) {
+      const slideWidth = document.querySelector(".slider").offsetWidth;
+      slides.style.transform = `translateX(-${index * slideWidth}px)`;
+    }
 
- .hana-slider-3d .slides {
-  height: 300px;  /* ?щ씪?대뜑 ? ?믪씠 怨좎젙 */
-}
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
 
-.hana-slider-3d .slides img {
-  height: 100%;    /* 遺紐??믪씠(300px)??留욎땄 */
-  width: auto;     /* 鍮꾩쑉 ?좎??섎ŉ ?먮룞 ?덈퉬 */
-  object-fit: cover;
-  margin: 0 10px;
-  border-radius: 10px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    }
 
+    window.addEventListener("load", () => {
+      showSlide(currentIndex);
+      setInterval(nextSlide, 3000);
+    });
 
-
-  .hana-slider-3d .slides img:hover {
-    transform: rotateY(5deg) scale(1.05);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.35);
-  }
-
-  .hana-slider-3d .buttons {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 10;
-  }
-
-  .hana-slider-3d .buttons button {
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    padding: 12px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-    transition: background-color 0.3s;
-  }
-
-  .hana-slider-3d .buttons button:hover {
-    background-color: rgba(255, 255, 255, 1);
-  }
-</style>
+    window.addEventListener("resize", () => {
+      showSlide(currentIndex);
+    });
+  </script>
 
 
 
@@ -389,14 +388,12 @@
 
 
 
-
-
-<!-- Dessert section ?쒖옉 -->
+<!-- Dessert section 시작 -->
 
 
 <head>
   <meta charset="UTF-8" />
-  <title>?쇱そ, 媛?대뜲, ?ㅻⅨ履?媛숈? 硫붾돱 諛뺤뒪</title>
+  <title>왼쪽, 가운데, 오른쪽 같은 메뉴 박스</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -410,7 +407,7 @@
       gap: 20px;
       max-width: 1200px;
       margin: 60px auto 0;
-      flex-wrap: wrap; /* 以꾨컮轅??덉슜 */
+      flex-wrap: wrap; /* 줄바꿈 허용 */
     }
 
     .menu-box {
@@ -444,7 +441,7 @@
       width: 100px;
       height: auto;
       margin-top: 20px;
-    /* ??異붽?: 紐⑤컮?????*/
+    /* ✅ 추가: 모바일 대응 */
   @media (max-width: 768px) {
     .three-columns {
       flex-direction: column;
@@ -468,9 +465,9 @@
 
   <div class="three-columns">
 
-    <!-- ?쇱そ 諛뺤뒪 -->
+    <!-- 왼쪽 박스 -->
     <div class="menu-box">
-      <img src="?깆“湲?beverages1.png" alt="Beverages" class="center-image">
+      <img src="성조기 beverages1.png" alt="Beverages" class="center-image">
 <img src="coke.jpg" alt="Yellowtail Sushi" style="width: 100px; height: 100px;" />
       <div class="menu-text">
 
@@ -485,11 +482,11 @@
 
     </div>
  
-    <!-- 媛?대뜲 諛뺤뒪 -->
+    <!-- 가운데 박스 -->
 
     <div class="menu-box">
 
-     <img src="?깆“湲?beverages11.png" alt="Beverages" class="center-image">
+     <img src="성조기 beverages11.png" alt="Beverages" class="center-image">
 <img src="cheesecake2.jpg" alt="Yellowtail Sushi" style="width: 100px; height: 100px;" />
       <div class="menu-text">
         <h3>Green Tea Ice Cream <span class="price">$4.5</span></h3>
@@ -502,9 +499,9 @@
       
     </div>
 
-    <!-- ?ㅻⅨ履?諛뺤뒪 -->
+    <!-- 오른쪽 박스 -->
     <div class="menu-box">
-      <img src="?깆“湲?beverages111.png" alt="Beverages" class="center-image">
+      <img src="성조기 beverages111.png" alt="Beverages" class="center-image">
 
 <img src="salad1.jpg" alt="Yellowtail Sushi" style="width: 100px; height: 100px;" />      <div class="menu-text">
         <h3>Green Salad <span class="price">$6.5</span></h3>
@@ -535,7 +532,7 @@
 
 
 
-<!-- Dessert section ??-->
+<!-- Dessert section 끝 -->
 
 
 
@@ -544,12 +541,12 @@
 
 
                             
- <title>slide 諛묒뿉 beverages 濡쒓퀬</title>
+ <title>slide 밑에 beverages 로고</title>
   <style>
     .center-image {
       display: block;
       margin: 0 auto;
-      max-width: 500px; /* ?꾩슂???곕씪 ?ш린 議곗젅 */
+      max-width: 500px; /* 필요에 따라 크기 조절 */
       height: auto;
     }
   </style>
@@ -579,13 +576,13 @@
 
 
 
-  <!-- 硫붾돱 ?뱀뀡, ?ъ떆誘??뱀뀡 ?깆? 洹몃?濡??좎? -->
-  <!-- 以묐났??id="menu"??HTML 洹쒖튃???섎굹留?議댁옱?댁빞 ?섎?濡?id???섎굹留??좎??섍굅??援щ텇 ?꾩슂 -->
- <!-- ?덉떆濡??섎굹??menu-section留??좎? -->
+  <!-- 메뉴 섹션, 사시미 섹션 등은 그대로 유지 -->
+  <!-- 중복된 id="menu"는 HTML 규칙상 하나만 존재해야 하므로 id는 하나만 유지하거나 구분 필요 -->
+ <!-- 예시로 하나의 menu-section만 유지 -->
  <section class="menu-section" id="menu">
 
   <h2>SUSHI</h2>
-<img src="?깆“湲?beverages1 copy.png" alt="Beverages" class="center-image">
+<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
   <div class="menu-container">
     <div class="menu-item">
       <div class="menu-text">
@@ -645,20 +642,20 @@
 
 
 
-								 <!-- ?ъ떆誘멥뀭?쒖옉 -->
+								 <!-- 사시미ㅣ시작 -->
 
 
      
-   <!-- 硫붾돱 ?뱀뀡, ?ъ떆誘??뱀뀡 ?깆? 洹몃?濡??좎? -->
-  <!-- 以묐났??id="menu"??HTML 洹쒖튃???섎굹留?議댁옱?댁빞 ?섎?濡?id???섎굹留??좎??섍굅??援щ텇 ?꾩슂 -->
- <!-- ?덉떆濡??섎굹??menu-section留??좎? -->
+   <!-- 메뉴 섹션, 사시미 섹션 등은 그대로 유지 -->
+  <!-- 중복된 id="menu"는 HTML 규칙상 하나만 존재해야 하므로 id는 하나만 유지하거나 구분 필요 -->
+ <!-- 예시로 하나의 menu-section만 유지 -->
  <section class="menu-section" id="menu">
 
 
   
 
    <h2>SASHIMI</h2>
-<img src="?깆“湲?beverages1 copy.png" alt="Beverages" class="center-image">
+<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
   <div class="menu-container">
   <div class="menu-container">
     <div class="menu-item">
@@ -718,14 +715,14 @@
   </section>
 
 
- 										<!-- regular rolls ?쒖옉 -->							
+ 										<!-- regular rolls 시작 -->							
 
 
 
-<!-- ???ш린??regular rolls ?뱀뀡 異붽???-->
+<!-- ✅ 여기에 regular rolls 섹션 추가됨 -->
   <section class="menu-section" id="sushi2">
     <h2> Regular ROlls </h2>
-<img src="?깆“湲?beverages1 copy.png" alt="Beverages" class="center-image">
+<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
     <div class="menu-container">
       <div class="menu-item">
         <div class="menu-text">
@@ -782,18 +779,18 @@
 
 
 
- 										<!-- Regular Rolls  ??-->
+ 										<!-- Regular Rolls  끝 -->
 
 
 
- 										<!-- Baked Rolls ?쒖옉 -->							
+ 										<!-- Baked Rolls 시작 -->							
 
 
 
-<!-- ???ш린??regular rolls ?뱀뀡 異붽???-->
+<!-- ✅ 여기에 regular rolls 섹션 추가됨 -->
   <section class="menu-section" id="sushi2">
     <h2> Baked ROlls </h2>
-<img src="?깆“湲?beverages1 copy.png" alt="Beverages" class="center-image">
+<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
     <div class="menu-container">
       <div class="menu-item">
         <div class="menu-text">
@@ -847,17 +844,17 @@
 
 
 
- 										<!-- Baked Rolls  ??-->
+ 										<!-- Baked Rolls  끝 -->
 
 
- 										<!-- No Rice  ?쒖옉 -->							
+ 										<!-- No Rice  시작 -->							
 
 
 
-<!-- ???ш린??regular rolls ?뱀뀡 異붽???-->
+<!-- ✅ 여기에 regular rolls 섹션 추가됨 -->
   <section class="menu-section" id="sushi2">
     <h2> NO Rice </h2>
-<img src="?깆“湲?beverages1 copy.png" alt="Beverages" class="center-image">
+<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
     <div class="menu-container">
       <div class="menu-item">
         <div class="menu-text">
@@ -899,7 +896,7 @@
 	Tuna, Shrimp, Salmon, Albarcore , Avacado, Crab, Radish Wrapped Cucumber 
         </div>
         <div class="menu-image">
-           <img src="PAUL ROLL W ?삳쭚 JPG.jpg" alt="salmon roll.jpg" style="width: 100px; height: auto;" />
+           <img src="PAUL ROLL W 팻말 JPG.jpg" alt="salmon roll.jpg" style="width: 100px; height: auto;" />
         </div>
       </div>
     </div>
@@ -914,15 +911,15 @@
 
 
 
- 										<!-- No Rice   ??-->
+ 										<!-- No Rice   끝 -->
 
-								<!-- Tempura Rolls  ?쒖옉 -->
+								<!-- Tempura Rolls  시작 -->
 
 
-<!-- ???ш린??Temura rolls ?뱀뀡 異붽???-->
+<!-- ✅ 여기에 Temura rolls 섹션 추가됨 -->
   <section class="menu-section" id="sushi2">
     <h2> Tempura ROlls </h2>
-<img src="?깆“湲?beverages1 copy.png" alt="Beverages" class="center-image">
+<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
     <div class="menu-container">
       <div class="menu-item">
         <div class="menu-text">
@@ -991,16 +988,16 @@
 
 
 
-								<!-- Tempura Rolls  ??-->
+								<!-- Tempura Rolls  끝 -->
 
 
-								<!-- Classic Rolls  ?쒖옉 -->
+								<!-- Classic Rolls  시작 -->
 
 
-<!-- ???ш린??regular rolls ?뱀뀡 異붽???-->
+<!-- ✅ 여기에 regular rolls 섹션 추가됨 -->
   <section class="menu-section" id="sushi2">
     <h2> Classic ROlls </h2>
-<img src="?깆“湲?beverages1 copy.png" alt="Beverages" class="center-image">
+<img src="성조기 beverages1 copy.png" alt="Beverages" class="center-image">
     <div class="menu-container">
       <div class="menu-item">
         <div class="menu-text">
@@ -1073,7 +1070,7 @@
 
 
 
-								<!-- Classic Rolls  ??-->
+								<!-- Classic Rolls  끝 -->
 
 
 
