@@ -247,26 +247,32 @@
   <title>Hana Sushi Slider</title>
   <style>
     .slider {
-      width: 400px;
-      height 300px;
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
       overflow: hidden;
       position: relative;
-      margin: auto;
+      margin: 50px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
     }
 
+    /* 슬라이드 트랙 */
     .slides {
       display: flex;
-      width: 400%;
-      height: 300%;
       transition: transform 0.5s ease-in-out;
     }
 
-      .slides img {
-      width: 400px;
+    /* 이미지 스타일 */
+    .slides img {
+      width: 100%;
       height: 300px;
       object-fit: cover;
+      flex-shrink: 0;
+      border-radius: 10px;
     }
 
+    /* 버튼 스타일 */
     .buttons {
       position: absolute;
       width: 100%;
@@ -274,35 +280,40 @@
       display: flex;
       justify-content: space-between;
       transform: translateY(-50%);
+      z-index: 10;
     }
 
     .buttons button {
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.7);
       border: none;
       padding: 10px;
+      border-radius: 50%;
+      font-size: 20px;
       cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    }
+
+    .buttons button:hover {
+      background-color: rgba(255, 255, 255, 1);
     }
   </style>
 </head>
 <body>
 
-  <!-- ???щ씪?대뜑 ?쒖옉 -->
-<div class="slider hana-slider-3d">
-  <div class="slides" id="slideContainer">
-
-
-<img src="PAUL ROLL W ?삳쭚 JPG.jpg" class="uniform-img" />  
-<img src="dodgersball1.jpg" class="uniform-img" />  
-<img src="pspng.png" class="uniform-img" />  
-<img src="g heart.png" class="uniform-img" />  
-<img src="pspng.png" class="uniform-img" />
- 
+ <div class="slider">
+    <div class="slides" id="slideContainer">
+      <img src="PAUL ROLL W 팻말 JPG.jpg" alt="Slide 1" />
+      <img src="dodgersball1.jpg" alt="Slide 2" />
+      <img src="pspng.png" alt="Slide 3" />
+      <img src="g heart.png" alt="Slide 4" />
+      <img src="pspng.png" alt="Slide 5" />
+    </div>
+    <div class="buttons">
+      <button onclick="prevSlide()">⟨</button>
+      <button onclick="nextSlide()">⟩</button>
+    </div>
   </div>
-  <div class="buttons">
-    <button onclick="prevSlide()">??/button>
-    <button onclick="nextSlide()">??/button>
-  </div>
-</div>
+
 
 <style>
   .hana-slider-3d {
@@ -362,28 +373,30 @@
   }
 </style>
 
-<script>
-  let currentIndex = 0;
-  const slides = document.getElementById("slideContainer");
-  const totalSlides = slides.children.length;
+ <script>
+    let currentIndex = 0;
+    const slides = document.getElementById("slideContainer");
+    const totalSlides = slides.children.length;
 
-  function showSlide(index) {
-    const slideWidth = 400 + 20; // ?대?吏 ?덈퉬 + margin
-    slides.style.transform = `translateX(-${index * slideWidth}px)`;
-  }
+    function updateSlidePosition() {
+      const sliderWidth = document.querySelector('.slider').clientWidth;
+      slides.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
+    }
 
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    showSlide(currentIndex);
-  }
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlidePosition();
+    }
 
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    showSlide(currentIndex);
-  }
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlidePosition();
+    }
 
-  setInterval(nextSlide, 3000); // ?먮룞 ?щ씪?대뱶
-</script>
+    window.addEventListener('resize', updateSlidePosition);
+    window.addEventListener('load', updateSlidePosition);
+    setInterval(nextSlide, 3000); // 자동 슬라이드
+  </script>
 
 
 
@@ -417,8 +430,7 @@
 
 
 <head>
-  <meta charset="UTF-8" />
-  <title>?쇱そ, 媛?대뜲, ?ㅻⅨ履?媛숈? 硫붾돱 諛뺤뒪</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -1126,3 +1138,4 @@
 
 </body>
 </html>
+
