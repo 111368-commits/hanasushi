@@ -303,10 +303,11 @@
  <div class="slider">
     <div class="slides" id="slideContainer">
       <img src="PAUL ROLL W 팻말 JPG.jpg" alt="Slide 1" />
-      <img src="dodgersball1.jpg" alt="Slide 2" />
       <img src="pspng.png" alt="Slide 3" />
-      <img src="g heart.png" alt="Slide 4" />
+      <img src="green heart png 1.png" alt="Slide 4" />
       <img src="pspng.png" alt="Slide 5" />
+	  <img src="hana sushi png.png" alt="Slide 5" />
+	  <img src="yt sashimi png.png" alt="Slide 5" />
     </div>
     <div class="buttons">
       <button onclick="prevSlide()">⟨</button>
@@ -439,35 +440,36 @@
       padding: 40px;
     }
 
-    .three-columns {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      max-width: 1200px;
-      margin: 60px auto 0;
-      flex-wrap: wrap; /* 以꾨컮轅??덉슜 */
+  .three-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* 줄바꿈 방지 */
+    width: 100%;
+    max-width: 1200px; /* 필요시 조절 */
+    margin: 0 auto; /* 가운데 정렬 */
+    overflow-x: auto; /* 작을 경우 가로 스크롤 */
     }
 
-    .menu-box {
-      flex: 1;
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
+ .menu-box {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 300px; /* 너무 작아지지 않게 */
     }
+.center-image {
+    display: block;
+    margin: 0 auto 10px auto;
+    max-width: 100%;
+    height: auto;
+  }
+  .menu-text h3 {
+    margin: 5px 0;
+    font-size: 16px;
+  }
 
-    .menu-box img.logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    .menu-box .menu-text h3 {
-      margin: 20px 0;
-      font-size: 16px;
-      border-bottom: 1px dashed #ccc;
-      padding-bottom: 4px;
+    .menu-text .price {
+      font-weight: normal;
+      color: #555;
     }
 
     .price {
@@ -505,7 +507,7 @@
     <!-- 왼쪽 박스 -->
     <div class="menu-box">
       <img src="성조기 beverages1.png" alt="Beverages" class="center-image">
-<img src="coke.jpg" alt="Yellowtail Sushi" style="width: 100px; height: 100px;" />
+<img src="coke.jpg" alt="Yellowtail Sushi" style="width: 120px; height: 120px;" />
       <div class="menu-text">
 
         <h3>Soda <span class="price">$3.5</span></h3>
@@ -524,7 +526,7 @@
     <div class="menu-box">
 
      <img src="성조기 beverages11.png" alt="Beverages" class="center-image">
-<img src="cheesecake2.jpg" alt="Yellowtail Sushi" style="width: 100px; height: 100px;" />
+<img src="cheesecake2.jpg" alt="Yellowtail Sushi" style="width: 120px; height: 120px;" />
       <div class="menu-text">
         <h3>Green Tea Ice Cream <span class="price">$4.5</span></h3>
         <h3>Banana Tempura <span class="price">$3.5</span></h3>
@@ -540,7 +542,8 @@
     <div class="menu-box">
       <img src="성조기 beverages111.png" alt="Beverages" class="center-image">
 
-<img src="salad1.jpg" alt="Yellowtail Sushi" style="width: 100px; height: 100px;" />      <div class="menu-text">
+<img src="salad1.jpg" alt="Yellowtail Sushi" style="width: 120px; height: 120px;" />     
+		<div class="menu-text">
         <h3>Green Salad <span class="price">$6.5</span></h3>
         <h3>Cucumber Salad <span class="price">$5.5</span></h3>
         <h3>Seaweed Salad <span class="price">$8.25</span></h3>
@@ -847,7 +850,7 @@
           
         </div>
         <div class="menu-image">
-         <img src="baked salmon roll.png" alt="tuna roll.jpg" style="width: 100px; height: auto;" />
+         <img src="baked salmon png.png" alt="tuna roll.jpg" style="width: 100px; height: auto;" />
         </div>  
       </div>
 
@@ -857,7 +860,7 @@
         California with baked salmon fried scallop on top
         </div>
         <div class="menu-image">
-          <img src="IMG_0485.jpg" alt="vocano rolll" style="width: 100px; height: auto;" />
+          <img src="volcano png.png" alt="vocano rolll" style="width: 100px; height: auto;" />
 	 
         </div>
       </div>
@@ -900,7 +903,7 @@
       
         </div>
         <div class="menu-image">
-          <img src="IMG_0484.JPG" alt="Green Heart" style="width: 100px; height: auto;" />
+          <img src="g heart.png" alt="Green Heart" style="width: 100px; height: auto;" />
         </div>
       </div>
 
@@ -911,7 +914,7 @@
           
         </div>
         <div class="menu-image">
-         <img src="baked salmon roll.png" alt="tuna roll.jpg" style="width: 100px; height: auto;" />
+         <img src="oh honey png.png" alt="tuna roll.jpg" style="width: 100px; height: auto;" />
         </div>  
       </div>
 
@@ -921,7 +924,7 @@
         Spicy  Crab, Avocado  Wrapped  Salmon  
         </div>
         <div class="menu-image">
-          <img src="IMG_0485.jpg" alt="vocano rolll" style="width: 100px; height: auto;" />
+          <img src="orange png.png" alt="vocano rolll" style="width: 100px; height: auto;" />
 	 
         </div>
       </div>
@@ -968,7 +971,7 @@
             Deep Fried Jumbo Scallop with Crab,Avocado,and Cucumber     
         </div>
         <div class="menu-image">
-          <img src="IMG_0484.JPG" alt="Dynamite roll" style="width: 100px; height: auto;" />
+          <img src="crunch scallop roll.jpg" alt="Dynamite roll" style="width: 100px; height: auto;" />
         </div>
       </div>
 
@@ -983,7 +986,7 @@
 	 
         </div>
         <div class="menu-image">
-         <img src="baked salmon roll.png" alt="tuna roll.jpg" style="width: 100px; height: auto;" />
+         <img src="fire roll.JPG" alt="tuna roll.jpg" style="width: 100px; height: auto;" />
         </div>  
       </div>
 
@@ -1000,7 +1003,7 @@
 	
         </div>
         <div class="menu-image">
-          <img src="IMG_0485.jpg" alt="vocano rolll" style="width: 100px; height: auto;" />
+          <img src="love roll.png" alt="vocano rolll" style="width: 100px; height: auto;" />
 	 
         </div>
       </div>
@@ -1013,7 +1016,7 @@
  	  
         </div>
         <div class="menu-image">
-           <img src="IMG_0580.jpg" alt="salmon roll.jpg" style="width: 100px; height: auto;" />
+           <img src="spider roll.jpg" alt="salmon roll.jpg" style="width: 100px; height: auto;" />
         </div>
       </div>
     </div>
@@ -1046,7 +1049,7 @@
          Spicy Tuna,Avocado,and Shrimp & Salmon on Top
         </div>
         <div class="menu-image">
-          <img src="IMG_0484.JPG" alt="Dynamite roll" style="width: 100px; height: auto;" />
+          <img src="911 png.png" alt="Dynamite roll" style="width: 100px; height: auto;" />
         </div>
       </div>
 
@@ -1060,7 +1063,7 @@
      	    Inside Salmon, and Out  Salmon 
         </div>
         <div class="menu-image">
-         <img src="baked salmon roll.png" alt="tuna roll.jpg" style="width: 100px; height: auto;" />
+         <img src="caterpillar roll.jpg" alt="tuna roll.jpg" style="width: 100px; height: auto;" />
         </div>  
       </div>
 
@@ -1076,7 +1079,7 @@
 
         </div>
         <div class="menu-image">
-          <img src="IMG_0485.jpg" alt="vocano rolll" style="width: 100px; height: auto;" />
+          <img src="rainbow.jpg" alt="vocano rolll" style="width: 100px; height: auto;" />
 	 
         </div>
       </div>
@@ -1093,7 +1096,7 @@
 
         </div>
         <div class="menu-image">
-           <img src="IMG_0580.jpg" alt="salmon roll.jpg" style="width: 100px; height: auto;" />
+           <img src="special spicy tuna roll.png" alt="salmon roll.jpg" style="width: 100px; height: auto;" />
         </div>
       </div>
     </div>
@@ -1138,9 +1141,6 @@
 
 </body>
 </html>
-
-
-
 
 
 
