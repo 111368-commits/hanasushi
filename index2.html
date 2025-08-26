@@ -1,3 +1,428 @@
+콘텐츠로 건너뛰기
+
+ChatGPT
+
+로그인
+나의 말:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HANA SUSHI</title>
+
+	
+	<style>
+  h1 {
+    display: none;
+  }	
+		
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+		
+  body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	  background-image: url("https://raw.githubusercontent.com/111368-commits/hanasushi/main/special%20sashimi.jpg");
+      background-color: #f9f5f1;
+      color: #3a3a3a;
+    }
+
+    header {
+
+
+
+      background-color: #fff5f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      flex-wrap: wrap;
+    }
+
+    header .logo img {
+      height: 88px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    header .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .phone-number {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #d45d4a;
+      background: linear-gradient(to right, ffe0e0, #ffffff);
+      padding: 6px 12px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(212, 93, 74, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .phone-number:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(212, 93, 74, 0.3);
+      cursor: pointer;
+    }
+
+    /* ???ㅻ퉬寃뚯씠???좊땲硫붿씠??異붽? */
+    nav {
+      margin-top: 15px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      animation: fadeSlideIn 1s ease forwards;
+      width: 100%;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #d45d4a;
+      font-weight: 600;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: navLinkFade 0.6s ease forwards;
+      position: relative;
+      font-size: 1.1em;
+    }
+
+    nav a:nth-child(1) { animation-delay: 0.2s; }
+    nav a:nth-child(2) { animation-delay: 0.4s; }
+    nav a:nth-child(3) { animation-delay: 0.6s; }
+    nav a:nth-child(4) { animation-delay: 0.8s; }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      height: 2px;
+      width: 0;
+      background-color: #d45d4a;
+      transition: width 0.3s;
+    }
+
+    nav a:hover {
+      color: #a63f34;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    @keyframes navLinkFade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .banner {
+      background: url('banner.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 36px;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+
+    .menu-section {
+      padding: 40px 20px;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .menu-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #d45d4a;
+    }
+
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding-bottom: 10px;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: calc(25% - 20px);
+      background: #fff;
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+
+    .menu-text {
+      flex: 1;
+      padding-right: 10px;
+    }
+
+    .menu-text h3 {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+      font-size: 16px;
+      white-space: nowrap;
+    }
+
+    .menu-image img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 1023px) {
+      .menu-item {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .menu-item {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    footer {
+      background-color: #fff5f0;
+      text-align: center;
+      padding: 20px;
+      color: #7a7a7a;
+      font-size: 14px;
+      margin-top: 40px;
+		
+	
+	}
+
+  </style>
+</head>
+
+	
+	
+	
+	
+	
+</body>
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<header>
+    <div class="logo">
+      <img src="hanasushilogoPNG.png" alt="HANA SUSHI restaurant logo" />
+
+ 
+ </div>
+    <div class="phone-number"> 📞 (805) 520-1333 / (805) 520-1313</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="banner" id="home">
+ <div style="text-align: center;"> 
+Welcome to HANA SUSHI 
+ 
+
+  </div>
+  
+  </section>
+
+
+
+
+<style>
+
+<div id="slider">
+
+<!-- Click Here 아이콘 (슬라이더 아래 중앙 정렬) -->
+<div style="text-align: center; margin-top: 40px;">
+  <a href="index.html">
+	<img src="https://raw.githubusercontent.com/111368-commits/hanasushi/main/BACKTO%20HOME%20BUTTON%20copy.png" 
+           alt="Back to Home" 
+           style="width: 300px; max-width: 90%; height: auto;">
+    </a>
+</div>
+</style>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+잘 되나 확인해줘
+ChatGPT의 말:
+전체적으로 잘 작성하셨지만, HTML 구조에 약간의 오류와 잘못된 위치가 있어 페이지가 제대로 작동하지 않을 수 있습니다. 아래에 수정 포인트를 정리해드리고, 정리된 코드 예시도 제공드릴게요.
+
+🔧 주요 문제점 요약
+✅ <body> 태그가 닫힌 위치가 너무 빠릅니다.
+현재는 <header> 전에 닫혀 있어서, 모든 본문이 <body> 밖에 위치해 있어 잘못된 구조입니다.
+
+❌ <style> 태그 안에 HTML (<div>)가 포함되어 있음
+CSS는 <style>에, HTML은 <body>에 넣어야 합니다.
+
+✅ 중복된 <meta name="viewport"...> 있음 → 하나만 남겨야 함
+
+🚫 주석에 깨진 문자 (/* ???ㅻ퉬寃뚯씠???좊땲硫붿씠??異붽? */)
+→ 지우거나 올바른 주석으로 수정
+
+✅ 수정된 코드 예시 (핵심 구조 유지)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HANA SUSHI</title>
+
+  <style>
+    /* --- CSS STYLES 그대로 유지 (생략 가능) --- */
+    /* 모든 기존 CSS 여기에 포함됨 (생략) */
+  </style>
+</head>
+
+<body>
+
+  <!-- 헤더 영역 -->
+  <header>
+    <div class="logo">
+      <img src="hanasushilogoPNG.png" alt="HANA SUSHI restaurant logo" />
+    </div>
+    <div class="phone-number">📞 (805) 520-1333 / (805) 520-1313</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- 배너 -->
+  <section class="banner" id="home">
+    <div style="text-align: center;">Welcome to HANA SUSHI</div>
+  </section>
+
+  <!-- 슬라이더 아래 버튼 -->
+  <div id="slider">
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="index.html">
+        <img src="https://raw.githubusercontent.com/111368-commits/hanasushi/main/BACKTO%20HOME%20BUTTON%20copy.png" 
+             alt="Back to Home" 
+             style="width: 300px; max-width: 90%; height: auto;">
+      </a>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <footer>
+    &copy; 2025 HANA SUSHI. All rights reserved.
+  </footer>
+
+</body>
+</html>
+✅ 요약: 이렇게 고치세요
+항목	상태	설명
+<body> 위치	❌	<header> 포함 모든 본문 요소는 <body> 안에 있어야 합니다
+<style> 내부 HTML	❌	<style>엔 오직 CSS만! <div>는 밖으로 빼세요
+<meta viewport> 중복	❌	하나만 남기고 삭제하세요
+코드 정렬	🔧	<head>, <body>, <header> 등의 구조를 위계에 맞게 정리하면 유지보수에 좋습니다
+필요하시면 전체 CSS 포함 완성 코드도 드릴 수 있어요.
+더 도와드릴까요?
+
+나의 말:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -309,6 +734,7 @@
 
 </body>
 </html>
+필요없는 부분은 없애고 싶은데]
 
 
 
@@ -349,4 +775,229 @@
 
 
 
+ChatGPT의 말:
+좋습니다! 작성하신 HTML 코드는 전반적으로 잘 구성되어 있습니다.
+하지만 중복, 오타, 불필요한 태그, 사용되지 않는 코드, 잘못된 위치 등이 있으므로, 깔끔하게 정리해드릴게요.
 
+✅ 정리 포인트
+항목	설명	조치
+✅ 중복된 <meta name="viewport">	하나만 남기고 삭제	정리 완료
+❌ <style> 안에 HTML 태그가 있었던 흔적	제거	정리 완료
+❌ 깨진 주석 /* ???ㅻ퉬... */	의미 없고 깨짐	삭제
+✅ <h1>에 display: none	실제로 안 쓰고 있음	삭제 가능
+✅ 정리 안 된 빈 줄 및 들여쓰기	코드 가독성 떨어짐	정리 완료
+✨ 정리된 HTML 코드 (불필요한 부분 제거 후)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HANA SUSHI</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f5f1;
+      color: #3a3a3a;
+    }
+
+    header {
+      background-color: #fff5f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      flex-wrap: wrap;
+    }
+
+    header .logo img {
+      height: 88px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    header .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .phone-number {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #d45d4a;
+      background: linear-gradient(to right, #ffe0e0, #ffffff);
+      padding: 6px 12px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(212, 93, 74, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .phone-number:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(212, 93, 74, 0.3);
+      cursor: pointer;
+    }
+
+    nav {
+      margin-top: 15px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      animation: fadeSlideIn 1s ease forwards;
+      width: 100%;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #d45d4a;
+      font-weight: 600;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: navLinkFade 0.6s ease forwards;
+      position: relative;
+      font-size: 1.1em;
+    }
+
+    nav a:nth-child(1) { animation-delay: 0.2s; }
+    nav a:nth-child(2) { animation-delay: 0.4s; }
+    nav a:nth-child(3) { animation-delay: 0.6s; }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      height: 2px;
+      width: 0;
+      background-color: #d45d4a;
+      transition: width 0.3s;
+    }
+
+    nav a:hover {
+      color: #a63f34;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    @keyframes navLinkFade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .banner {
+      background: url('banner.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 36px;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      text-align: center;
+    }
+
+    .menu-section {
+      padding: 40px 20px;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .menu-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #d45d4a;
+    }
+
+    .menu-section p {
+      text-align: center;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    footer {
+      background-color: #fff5f0;
+      text-align: center;
+      padding: 20px;
+      color: #7a7a7a;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 767px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="hanasushilogoPNG.png" alt="HANA SUSHI restaurant logo" />
+    </div>
+    <div class="phone-number">📞 (805) 520-1333 / (805) 520-1313</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="banner" id="home">
+    Welcome to HANA SUSHI
+  </section>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="https://111368-commits.github.io/hanasushi/index.html" target="_blank">
+      <img src="https://111368-commits.github.io/hanasushi/BACKTO%20HOME%20BUTTON%20copy1.png" 
+           alt="Click Here"
+           style="width: 150px; cursor: pointer;">
+    </a>
+  </div>
+
+  <section class="menu-section" id="about">
+    <h2>About Us</h2>
+    <p>
+      HANA SUSHI is dedicated to serving fresh and delicious sushi in a cozy atmosphere located at 575 Country Club Drive STE D, Simi Valley, CA 93065.
+    </p>
+  </section>
+
+  <section class="menu-section" id="contact">
+    <h2>Contact</h2>
+    <p>
+      Phone: 805-520-1333 / 805-520-1313<br />
+      Hours:<br />
+      Monday-Thursday: 5:00PM - 9:30PM<br />
+      Friday-Saturday: 11:30AM - 2:30PM, 5:00PM - 10:00PM
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 HANA SUSHI. All rights reserved.
+  </footer>
+
+</body>
+</html>
