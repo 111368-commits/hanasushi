@@ -241,107 +241,9 @@
     </nav>
   </header>
 
-  <section class="banner" id="home">
-  Welcome to HANA SUSHI 
-  </section>
 
 
 
-						 <!-- slide ?쒖옉 -->
-
-
-</a>
-  <title>Hana Sushi Slider</title>
-  <style>
-    .slider {
-      width: 100%;
-      max-width: 500px;
-      height: 300px;
-      overflow: hidden;
-      position: relative;
-      margin: 50px auto;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    }
-
-    /* 슬라이드 트랙 */
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    /* 이미지 스타일 */
-    .slides img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      flex-shrink: 0;
-      border-radius: 10px;
-    }
-
-    /* 버튼 스타일 */
-    .buttons {
-      position: absolute;
-      width: 100%;
-      top: 50%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-      z-index: 10;
-    }
-
-    .buttons button {
-      background-color: rgba(255, 255, 255, 0.7);
-      border: none;
-      padding: 10px;
-      border-radius: 50%;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-    }
-
-    .buttons button:hover {
-      background-color: rgba(255, 255, 255, 1);
-    }
-  </style>
-</head>
-<body>
-
- <div class="slider">
-    <div class="slides" id="slideContainer">
-      <img src="PAUL ROLL W 팻말 JPG.jpg" alt="Slide 1" />
-      <img src="pspng.png" alt="Slide 3" />
-      <img src="green heart png 1.png" alt="Slide 4" />
-      <img src="fire roll.JPG" alt="Slide 5" />
-	  <img src="hana sushi png.png" alt="Slide 5" />
-	  <img src="yt sashimi png.png" alt="Slide 5" />
-    </div>
-    <div class="buttons">
-      <button onclick="prevSlide()">⟨</button>
-      <button onclick="nextSlide()">⟩</button>
-	</div>
-  </div>
-
-
-<style>
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -374,90 +276,6 @@
 	
 	
 	
-	
-	
-	
-	.hana-slider-3d {
-    perspective: 1000px;
-    transform-style: preserve-3d;
-  }
-
-  .hana-slider-3d .slides {
-    display: flex;
-    transition: transform 0.6s ease-in-out;
-  }
-
- .hana-slider-3d .slides {
-  height: 300px;  /* ?щ씪?대뜑 ? ?믪씠 怨좎젙 */
-}
-
-.hana-slider-3d .slides img {
-  height: 100%;    /* 遺紐??믪씠(300px)??留욎땄 */
-  width: auto;     /* 鍮꾩쑉 ?좎??섎ŉ ?먮룞 ?덈퉬 */
-  object-fit: cover;
-  margin: 0 10px;
-  border-radius: 10px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-
-
-  .hana-slider-3d .slides img:hover {
-    transform: rotateY(5deg) scale(1.05);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.35);
-  }
-
-  .hana-slider-3d .buttons {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 10;
-  }
-
-  .hana-slider-3d .buttons button {
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    padding: 12px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-    transition: background-color 0.3s;
-  }
-
-  .hana-slider-3d .buttons button:hover {
-    background-color: rgba(255, 255, 255, 1);
-  }
-</style>
-
- <script>
-    let currentIndex = 0;
-    const slides = document.getElementById("slideContainer");
-    const totalSlides = slides.children.length;
-
-    function updateSlidePosition() {
-      const sliderWidth = document.querySelector('.slider').clientWidth;
-      slides.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateSlidePosition();
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      updateSlidePosition();
-    }
-
-    window.addEventListener('resize', updateSlidePosition);
-    window.addEventListener('load', updateSlidePosition);
-    setInterval(nextSlide, 3000); // 자동 슬라이드
-  </script>
 
 
 
@@ -484,90 +302,7 @@
 
 
 
-
-<!-- Dessert section ?쒖옉 -->
-
-
-<head>
-  <meta charset="UTF-8" />
-  <title>?쇱そ, 媛?대뜲, ?ㅻⅨ履?媛숈? 硫붾돱 諛뺤뒪</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      padding: 40px;
-    }
-
-  .three-columns {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap; /* 줄바꿈 방지 */
-    width: 100%;
-    max-width: 1200px; /* 필요시 조절 */
-    margin: 0 auto; /* 가운데 정렬 */
-    overflow-x: auto; /* 작을 경우 가로 스크롤 */
-    }
-
- .menu-box {
-    flex: 1;
-    padding: 10px;
-    box-sizing: border-box;
-    min-width: 300px; /* 너무 작아지지 않게 */
-    }
-.center-image {
-    display: block;
-    margin: 0 auto 10px auto;
-    max-width: 100%;
-    height: auto;
-  }
-  .menu-text h3 {
-    margin: 5px 0;
-    font-size: 16px;
-  }
-
-    .menu-text .price {
-      font-weight: normal;
-      color: #555;
-    }
-
-    .price {
-      float: right;
-      color: #555;
-    }
-
-    .menu-box img.menu-image {
-      width: 100px;
-      height: auto;
-      margin-top: 20px;
-    /* ??異붽?: 紐⑤컮?????*/
-  @media (max-width: 768px) {
-    .three-columns {
-      flex-direction: column;
-      align-items: center;
-      margin: 20px auto;
-     }
-     .menu-box {
-      width: 90%;
-      max-width: 400px;
-      margin-bottom: 30px;
-    }
-  }
-  </style>
-</head>
-
-
-<body>
-
-
-
- <div 
-
- 										<!-- Regular Rolls  끝 -->
-
-
-
- 										<!-- Baked Rolls 시작 -->							
-
+ 								
 
 
 
@@ -622,6 +357,7 @@
 
 </body>
 </html>
+
 
 
 
