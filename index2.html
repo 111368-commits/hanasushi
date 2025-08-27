@@ -367,30 +367,7 @@
   }
 </style>
 
- <script>
-    let currentIndex = 0;
-    const slides = document.getElementById("slideContainer");
-    const totalSlides = slides.children.length;
 
-    function updateSlidePosition() {
-      const sliderWidth = document.querySelector('.slider').clientWidth;
-      slides.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateSlidePosition();
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      updateSlidePosition();
-    }
-
-    window.addEventListener('resize', updateSlidePosition);
-    window.addEventListener('load', updateSlidePosition);
-    setInterval(nextSlide, 3000); // 자동 슬라이드
-  </script>
 
 
 
@@ -489,6 +466,7 @@
 
 </body>
 </html>
+
 
 
 
