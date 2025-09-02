@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HANA SUSHI</title>
 
 	
@@ -130,7 +130,16 @@
       }
     }
 
-    .banner {
+.menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+		
+		
+		
+		
+		.banner {
       background: url('banner.jpg') center/cover no-repeat;
       height: 300px;
       display: flex;
@@ -141,7 +150,9 @@
       font-weight: 700;
       text-shadow: 0 0 10px rgba(0,0,0,0.7);
     }
-
+     .container {
+  max-width: 1200px;
+  width: 100%;
     .menu-section {
       padding: 40px 20px;
       max-width: 100%;
@@ -184,7 +195,11 @@
     h2, p {
       font-size: 1rem;
     }
-	.menu-item img {
+	img {
+  width: 100%;
+  height: auto;
+}
+	 .menu-item img {
       width: 100%;       /* 화면 크기에 맞게 자동 줄어듦 */
       height: auto;
       border-radius: 8px;
@@ -219,12 +234,12 @@
       }
     }
 
-    @media (max-width: 767px) {
-      .menu-item {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-      }
+   @media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    font-size: 14px;
+  }
+}
 
       nav {
         flex-direction: column;
@@ -1306,6 +1321,7 @@
 
 </body>
 </html>
+
 
 
 
