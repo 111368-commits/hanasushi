@@ -11,8 +11,6 @@
   h1 {
     display: none;
   }	
-		
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		
 		
@@ -162,12 +160,13 @@
     }
 
     .menu-item {
-      display: flex;
+      gap: 10px;
+	  display: flex;
       align-items: center;
       justify-content: space-between;
       width: calc(25% - 20px);
       background: #fff;
-      padding: 10px;
+      padding: 15px;
       border-radius: 6px;
       box-shadow: 0 1px 5px rgba(0,0,0,0.1);
       box-sizing: border-box;
@@ -175,42 +174,35 @@
 
     .menu-text {
       flex: 1;
-      padding-right: 10px;
+      padding-right: 15px;
     }
 
     .menu-text h3 {
       display: flex;
       justify-content: space-between;
       margin: 5px 0;
-      font-size: 16px;
+      font-size: 18px;
+	  line-height: 1.4;
       white-space: nowrap;
     }
 
-    .menu-image img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-
+   .menu-image img {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+}
     @media (max-width: 1023px) {
       .menu-item {
         width: calc(50% - 20px);
       }
     }
 
-    @media (max-width: 767px) {
-      .menu-item {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+  @media (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
     footer {
       background-color: #fff5f0;
@@ -1286,6 +1278,7 @@
 
 </body>
 </html>
+
 
 
 
