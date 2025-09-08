@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HANA SUSHI</title>
 
-  <style>
-    h1 {
-      display: none;
-    }
+	
+	<style>
+  h1 {
+    display: none;
+  }	
+		
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
+		
+		
+  body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f9f5f1;
       color: #3a3a3a;
     }
 
-    /* 헤더 */
     header {
+
+
+
       background-color: #fff5f0;
       display: flex;
       align-items: center;
@@ -44,12 +52,11 @@
       font-size: 1.2em;
       font-weight: bold;
       color: #d45d4a;
-      background: linear-gradient(to right, #ffe0e0, #ffffff);
+      background: linear-gradient(to right, ffe0e0, #ffffff);
       padding: 6px 12px;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(212, 93, 74, 0.2);
       transition: transform 0.3s, box-shadow 0.3s;
-      white-space: nowrap;
     }
 
     .phone-number:hover {
@@ -58,7 +65,7 @@
       cursor: pointer;
     }
 
-    /* 네비게이션 */
+    /* ???ㅻ퉬寃뚯씠???좊땲硫붿씠??異붽? */
     nav {
       margin-top: 15px;
       display: flex;
@@ -83,6 +90,7 @@
     nav a:nth-child(1) { animation-delay: 0.2s; }
     nav a:nth-child(2) { animation-delay: 0.4s; }
     nav a:nth-child(3) { animation-delay: 0.6s; }
+    nav a:nth-child(4) { animation-delay: 0.8s; }
 
     nav a::after {
       content: "";
@@ -121,7 +129,6 @@
       }
     }
 
-    /* 배너 */
     .banner {
       background: url('banner.jpg') center/cover no-repeat;
       height: 300px;
@@ -134,7 +141,6 @@
       text-shadow: 0 0 10px rgba(0,0,0,0.7);
     }
 
-    /* 메뉴 */
     .menu-section {
       padding: 40px 20px;
       max-width: 100%;
@@ -156,13 +162,12 @@
     }
 
     .menu-item {
-      gap: 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: calc(25% - 20px);
       background: #fff;
-      padding: 15px;
+      padding: 10px;
       border-radius: 6px;
       box-shadow: 0 1px 5px rgba(0,0,0,0.1);
       box-sizing: border-box;
@@ -170,74 +175,40 @@
 
     .menu-text {
       flex: 1;
-      padding-right: 15px;
+      padding-right: 10px;
     }
 
     .menu-text h3 {
       display: flex;
       justify-content: space-between;
       margin: 5px 0;
-      font-size: 18px;
-      line-height: 1.4;
+      font-size: 16px;
       white-space: nowrap;
     }
 
     .menu-image img {
-      width: 100%;
-      max-width: 80px;
-      height: auto;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
     }
 
-    /* 태블릿 이하 */
     @media (max-width: 1023px) {
       .menu-item {
         width: calc(50% - 20px);
       }
     }
 
-    /* 📱 모바일 최적화 */
     @media (max-width: 767px) {
-      header {
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 15px;
-      }
-
-      header .logo img {
-        height: 60px;
-        transition: none;
-      }
-
-      .phone-number {
-        font-size: 1em;
-        padding: 4px 8px;
-        margin: 0 10px;
-        white-space: nowrap;
-      }
-
-      nav {
-        flex-direction: row !important;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 10px !important;
-        width: auto !important;
-        margin-top: 0;
-      }
-
-      nav a {
-        margin-left: 10px !important;
-        font-size: 1em;
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-        white-space: nowrap;
-      }
-
       .menu-item {
         width: 100%;
         flex-direction: column;
         align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
       }
     }
 
@@ -248,21 +219,21 @@
       color: #7a7a7a;
       font-size: 14px;
       margin-top: 40px;
-    }
+
+	
+	}
+
   </style>
 </head>
-
 <body>
 
   <header>
     <div class="logo">
       <img src="hanasushilogoPNG.png" alt="HANA SUSHI restaurant logo" />
-    </div>
 
-    <div class="phone-number">
-      📞 (805) 520-1333 / (805) 520-1313
-    </div>
-
+ 
+ </div>
+    <div class="phone-number"> 📞 (805) 520-1333 / (805) 520-1313</div>
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -271,13 +242,69 @@
   </header>
 
   <section class="banner" id="home">
-    Welcome to HANA SUSHI 
+  Welcome to HANA SUSHI 
   </section>
 
-  <!-- 추가 콘텐츠 영역 이어서 작성 가능 -->
 
-</body>
-</html>
+
+						 <!-- slide ?쒖옉 -->
+
+
+</a>
+  <title>Hana Sushi Slider</title>
+  <style>
+    .slider {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      margin: 50px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    /* 슬라이드 트랙 */
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    /* 이미지 스타일 */
+    .slides img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border-radius: 10px;
+    }
+
+    /* 버튼 스타일 */
+    .buttons {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+
+    .buttons button {
+      background-color: rgba(255, 255, 255, 0.7);
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    }
+
+    .buttons button:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+  </style>
+</head>
 <body>
 
  <div class="slider">
@@ -1259,8 +1286,6 @@
 
 </body>
 </html>
-
-
 
 
 
